@@ -36,6 +36,7 @@ public class OverworldOverhaul implements ModInitializer {
         if (!item_suffix.isEmpty()) item_path += ("_" + item_suffix);
         createBlockAndItem(path + "_block");
         if (has_ore) createBlockAndItem(path + "_ore");
+        // TODO: create no block for base item
         createBlockAndItem(item_path);
     }
 
