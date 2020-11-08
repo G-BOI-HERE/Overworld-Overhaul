@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "overworldoverhaul:steel_leggings"
+  },
+  "addition": {
+    "item": "minecraft:silver_ingot"
+  },
+  "result": {
+    "item": "minecraft:silver_leggings"
+  }
+}

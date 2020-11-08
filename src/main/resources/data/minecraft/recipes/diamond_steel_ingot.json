@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "overworldoverhaul:steel_ingot"
+    },
+    {
+      "item": "overworldoverhaul:steel_ingot"
+    },
+    {
+      "item": "overworldoverhaul:steel_ingot"
+    },
+    {
+      "item": "overworldoverhaul:steel_ingot"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "result": {
+    "item": "overworldoverhaul:diamond_steel_ingot"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "overworldoverhaul:steel_helmet"
+  },
+  "addition": {
+    "item": "minecraft:diamond_steel_ingot"
+  },
+  "result": {
+    "item": "minecraft:diamond_steel_helmet"
+  }
+}
