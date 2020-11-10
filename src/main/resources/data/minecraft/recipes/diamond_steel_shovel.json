@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_shovel"
   },
   "addition": {
-    "item": "minecraft:diamond_steel_ingot"
+    "item": "overworldoverhaul:diamond_steel_ingot"
   },
   "result": {
-    "item": "minecraft:diamond_steel_shovel"
+    "item": "overworldoverhaul:diamond_steel_shovel"
   }
 }

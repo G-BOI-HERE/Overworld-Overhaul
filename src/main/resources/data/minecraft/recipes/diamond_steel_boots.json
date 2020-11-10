@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_boots"
   },
   "addition": {
-    "item": "minecraft:diamond_steel_ingot"
+    "item": "overworldoverhaul:diamond_steel_ingot"
   },
   "result": {
-    "item": "minecraft:diamond_steel_boots"
+    "item": "overworldoverhaul:diamond_steel_boots"
   }
 }

@@ -13,11 +13,11 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Lazy;
 
 public enum ModArmorMaterials implements ArmorMaterial {
-    STEEL("steel", 9, new int[]{2,6,5,2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->
+    STEEL("steel", 15, new int[]{2,6,5,2}, 11, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 0.0F, 0.0F, () ->
             Ingredient.ofItems(OverworldOverhaul.Steel_Ingot)),
-    SILVER("silver", 9, new int[]{2,6,5,2}, 15, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () ->
+    SILVER("silver", 15, new int[]{2,6,5,2}, 18, SoundEvents.ITEM_ARMOR_EQUIP_GOLD, 0.0F, 0.0F, () ->
             Ingredient.ofItems(OverworldOverhaul.Silver_Ingot)),
-    DIAMOND_STEEL("diamond_steel", 33, new int[]{3,8,6,3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () ->
+    DIAMOND_STEEL("diamond_steel", 33, new int[]{3,8,6,3}, 14, SoundEvents.ITEM_ARMOR_EQUIP_NETHERITE, 2.0F, 0.0F, () ->
             Ingredient.ofItems(OverworldOverhaul.Diamond_Steel_Ingot));
 
     private static final int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};

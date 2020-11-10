@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_leggings"
   },
   "addition": {
-    "item": "minecraft:diamond_steel_ingot"
+    "item": "overworldoverhaul:diamond_steel_ingot"
   },
   "result": {
-    "item": "minecraft:diamond_steel_leggings"
+    "item": "overworldoverhaul:diamond_steel_leggings"
   }
 }

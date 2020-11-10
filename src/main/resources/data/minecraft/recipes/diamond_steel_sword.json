@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_sword"
   },
   "addition": {
-    "item": "minecraft:diamond_steel_ingot"
+    "item": "overworldoverhaul:diamond_steel_ingot"
   },
   "result": {
-    "item": "minecraft:diamond_steel_sword"
+    "item": "overworldoverhaul:diamond_steel_sword"
   }
 }
