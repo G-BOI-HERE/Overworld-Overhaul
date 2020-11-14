@@ -8,13 +8,14 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
 
 public enum ModToolMaterials implements ToolMaterial {
-    STEEL(2,250,6.0F,2.0F,10, () ->{
+
+    STEEL(2,250,7.0F,2.0F,11, () ->{
      return Ingredient.ofItems(OverworldOverhaul.Steel_Ingot);
     }),
-    SILVER(2,250,8.0F,2.0F,15, () ->{
+    SILVER(2,250,8.0F,2.0F,18, () ->{
         return Ingredient.ofItems(OverworldOverhaul.Silver_Ingot);
     }),
-    DIAMOND_STEEL(3, 1561, 8.0F, 3.0F, 10, () -> {
+    DIAMOND_STEEL(3, 1561, 8.0F, 3.0F, 14, () -> {
         return Ingredient.ofItems(OverworldOverhaul.Diamond_Steel_Ingot);
     });
 
@@ -25,7 +26,7 @@ public enum ModToolMaterials implements ToolMaterial {
     private final int enchantability;
     private final Lazy<Ingredient> repairIngredient;
 
-    private ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    ModToolMaterials(int miningLevel, int itemDurability, float miningSpeed, float attackDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;
