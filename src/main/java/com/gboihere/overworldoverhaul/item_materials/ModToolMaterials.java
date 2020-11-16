@@ -8,7 +8,6 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.util.Lazy;
 
 public enum ModToolMaterials implements ToolMaterial {
-
     STEEL(2,250,7.0F,2.0F,11, () ->{
      return Ingredient.ofItems(OverworldOverhaul.Steel_Ingot);
     }),
