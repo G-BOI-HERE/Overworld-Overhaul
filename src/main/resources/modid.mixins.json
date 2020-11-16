@@ -6,7 +6,7 @@
   "mixins": [
     "ArmorMaterialsMixin",
     "ToolMaterialsMixin",
-    "ItemsMixin"
+    "SwordItemMixin"
   ],
   "client": [
   ],
