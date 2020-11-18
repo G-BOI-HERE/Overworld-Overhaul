@@ -3,19 +3,40 @@ package com.gboihere.overworldoverhaul.item_materials;
 import java.util.function.Supplier;
 
 import com.gboihere.overworldoverhaul.OverworldOverhaul;
+import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Lazy;
 
 public enum ModToolMaterials implements ToolMaterial {
-    STEEL(2,250,7.0F,2.0F,11, () ->{
+    WOOD(0, 64, 2.0F, 0.0F, 1, () -> {
+        return Ingredient.fromTag(ItemTags.PLANKS);
+    }),
+    STONE(1, 124, 4.0F, 1.0F, 3, () -> {
+        return Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS);
+    }),
+    IRON(2, 250, 5.0F, 2.0F, 6, () -> {
+        return Ingredient.ofItems(Items.IRON_INGOT);
+    }),
+    STEEL(2,325,7.0F,2.0F,11, () ->{
      return Ingredient.ofItems(OverworldOverhaul.Steel_Ingot);
     }),
-    SILVER(2,250,8.0F,2.0F,18, () ->{
+    SILVER(2,325,8.0F,2.0F,18, () ->{
         return Ingredient.ofItems(OverworldOverhaul.Silver_Ingot);
     }),
-    DIAMOND_STEEL(3, 1561, 8.0F, 3.0F, 14, () -> {
+    GOLD(2, 325, 10.0F, 2.0F, 25, () -> {
+        return Ingredient.ofItems(Items.GOLD_INGOT);
+    }),
+    DIAMOND(2, 575, 8.0F, 2.0F, 11, () -> {
+        return Ingredient.ofItems(Items.DIAMOND);
+    }),
+    DIAMOND_STEEL(3, 1560, 8.0F, 3.0F, 14, () -> {
         return Ingredient.ofItems(OverworldOverhaul.Diamond_Steel_Ingot);
+    }),
+    //ADAMANTITE(4,2000,9.0F,3.0F,15,() -> {return Ingredient.ofItems(???)}),
+    NETHERITE(5, 3664, 10.0F, 5.0F, 16, () -> {
+        return Ingredient.ofItems(Items.NETHERITE_INGOT);
     });
 
     private final int miningLevel;
