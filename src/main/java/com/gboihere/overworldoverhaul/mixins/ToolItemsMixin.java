@@ -26,9 +26,6 @@ public class ToolItemsMixin {
         return null;
     }
 
-    /**
-     * @author
-     */
     @Inject(method = "register(Ljava/lang/String;Lnet/minecraft/item/Item;)Lnet/minecraft/item/Item;",
             at = @At(value="HEAD"), cancellable = true)
     private static void registerMixin(String id, Item item, CallbackInfoReturnable<Item> cir) {
