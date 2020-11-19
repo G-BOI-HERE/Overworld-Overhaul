@@ -18,56 +18,42 @@ public class OverworldOverhaul implements ModInitializer {
 
     public static final String MOD_ID = "overworldoverhaul";
 
-    public static final Item Ruby = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    public static final Item Sapphire = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    public static final Item Silver_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    public static final Item Steel_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    public static final Item Diamond_Steel_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
-    //Blocks
-    public static final Block Ruby_Ore = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false));
-    public static final Block Block_of_Ruby = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false).sounds(BlockSoundGroup.METAL));
-    public static final Block Sapphire_Ore = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false));
-    public static final Block Block_of_Sapphire = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false).sounds(BlockSoundGroup.METAL));
-    //Tools
-
+    public static Item Ruby = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static Item Sapphire = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static Item Silver_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static Item Steel_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static Item Diamond_Steel_Ingot = new Item(new FabricItemSettings().group(ItemGroup.MATERIALS));
+    public static Block Ruby_Ore = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false));
+    public static Block Block_of_Ruby = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false).sounds(BlockSoundGroup.METAL));
+    public static Block Sapphire_Ore = new Block(FabricBlockSettings.of(Material.STONE).strength(3.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false));
+    public static Block Block_of_Sapphire = new Block(FabricBlockSettings.of(Material.METAL).strength(5.0f, 6.0f).breakByTool(FabricToolTags.PICKAXES, 2).requiresTool().breakByHand(false).sounds(BlockSoundGroup.METAL));
     public static ToolItem Steel_Pickaxe = new CustomPickaxeItem(ModToolMaterials.STEEL, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Steel_Axe = new CustomAxeItem(ModToolMaterials.STEEL, 5, -3.1F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Steel_Hoe = new CustomHoeItem(ModToolMaterials.STEEL, -2, -1.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Steel_Shovel = new CustomShovelItem(ModToolMaterials.STEEL, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Steel_Sword = new CustomSwordItem(ModToolMaterials.STEEL, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-
     public static ToolItem Silver_Pickaxe = new CustomPickaxeItem(ModToolMaterials.SILVER, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Silver_Axe = new CustomAxeItem(ModToolMaterials.SILVER, 5, -3.1F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Silver_Hoe = new CustomHoeItem(ModToolMaterials.SILVER, -2, -1.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Silver_Shovel = new CustomShovelItem(ModToolMaterials.SILVER, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Silver_Sword = new CustomSwordItem(ModToolMaterials.SILVER, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-
     public static ToolItem Diamond_Steel_Pickaxe = new CustomPickaxeItem(ModToolMaterials.DIAMOND_STEEL, 1, -2.8F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Diamond_Steel_Axe = new CustomAxeItem(ModToolMaterials.DIAMOND_STEEL, 5, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Diamond_Steel_Hoe = new CustomHoeItem(ModToolMaterials.DIAMOND_STEEL, -3, 0.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Diamond_Steel_Shovel = new CustomShovelItem(ModToolMaterials.DIAMOND_STEEL, 1.5F, -3.0F, new Item.Settings().group(ItemGroup.TOOLS));
     public static ToolItem Diamond_Steel_Sword = new CustomSwordItem(ModToolMaterials.DIAMOND_STEEL, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-    //Armors
     public static Item Steel_Helmet = new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Steel_Chestplate = new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Steel_Leggings = new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Steel_Boots = new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
-
     public static Item Silver_Helmet = new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Silver_Chestplate = new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Silver_Leggings = new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Silver_Boots = new ArmorItem(ModArmorMaterials.SILVER, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
-
     public static Item Diamond_Steel_Helmet = new ArmorItem(ModArmorMaterials.DIAMOND_STEEL, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Diamond_Steel_Chestplate = new ArmorItem(ModArmorMaterials.DIAMOND_STEEL, EquipmentSlot.CHEST, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Diamond_Steel_Leggings = new ArmorItem(ModArmorMaterials.DIAMOND_STEEL, EquipmentSlot.LEGS, new Item.Settings().group(ItemGroup.COMBAT));
     public static Item Diamond_Steel_Boots = new ArmorItem(ModArmorMaterials.DIAMOND_STEEL, EquipmentSlot.FEET, new Item.Settings().group(ItemGroup.COMBAT));
-
-    //test
-
-
-
-
     @Override
     public void onInitialize() {
         //Materials
