@@ -9,27 +9,37 @@ import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 
 @Mixin(Items.class)
 
 public class ToolItemsMixin {
 
-//    private static Item register(String id, Item item) {
+    //    private static Item register(String id, Item item) {
 //        return register(String.valueOf(new Identifier(id)), item);
 //    }
     @Shadow
-    public static Item register(String id, Item item);
+    private static Item register(String id, Item item) {
+        return null;
+    }
+
     /**
      * @author
      */
-    @Overwrite
-    private static Item register(String id, Item item) {
+    @Inject(method = "register(Ljava/lang/String;Lnet/minecraft/item/Item;)Lnet/minecraft/item/Item;",
+            at = @At(value="HEAD"), cancellable = true)
+    private static void registerMixin(String id, Item item, CallbackInfoReturnable<Item> cir) {
         //Swords
         if (id.equals("wooden_sword")) {
-            return register(String.valueOf(new Identifier(id)), new CustomSwordItem(ModToolMaterials.WOOD, 10, -0.0F, (new Item.Settings()).group(ItemGroup.COMBAT)));
+            cir.setReturnValue(
+                    register(String.valueOf(new Identifier(id)), new CustomSwordItem(ModToolMaterials.WOOD,
+                            10, -0.0F, (new Item.Settings()).group(ItemGroup.COMBAT))));
         }
-        return register((new Identifier(id)), item);
+
+
         //            case "stone_sword":
 //                cir.setReturnValue(new CustomSwordItem(ModToolMaterials.GOLD, 0, -2.4F, (new Item.Settings()).group(ItemGroup.COMBAT)));
 //                break;
