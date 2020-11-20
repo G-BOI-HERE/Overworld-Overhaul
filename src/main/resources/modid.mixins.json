@@ -5,8 +5,9 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "ArmorMaterialsMixin",
-    "SwordItemsMixin",
-    "ToolItemsMixin"
+    "BlocksMixin",
+    "ItemsMixin",
+    "SwordItemsMixin"
   ],
   "client": [
   ],
