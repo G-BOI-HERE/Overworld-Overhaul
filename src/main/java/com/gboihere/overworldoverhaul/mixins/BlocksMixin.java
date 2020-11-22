@@ -1,6 +1,6 @@
 package com.gboihere.overworldoverhaul.mixins;
 
-import com.gboihere.overworldoverhaul.ModLeavesBlock;
+import com.gboihere.overworldoverhaul.items.blocks.ModLeavesBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.LeavesBlock;

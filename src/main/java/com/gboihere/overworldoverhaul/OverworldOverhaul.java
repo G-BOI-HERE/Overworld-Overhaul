@@ -117,7 +117,6 @@ public class OverworldOverhaul implements ModInitializer {
     public static ToolItem Netherite_Sword_GE = new CustomSwordItem(ModToolMaterials.NETHERITE, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
     public static ToolItem Netherite_Sword_GR = new CustomSwordItem(ModToolMaterials.NETHERITE, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
     public static ToolItem Netherite_Sword_GS = new CustomSwordItem(ModToolMaterials.NETHERITE, 3, -2.4F, new Item.Settings().group(ItemGroup.COMBAT));
-
     //Armor
         //Steel
     public static Item Steel_Helmet = new ArmorItem(ModArmorMaterials.STEEL, EquipmentSlot.HEAD, new Item.Settings().group(ItemGroup.COMBAT));
