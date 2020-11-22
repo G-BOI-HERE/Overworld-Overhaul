@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_chestplate"
   },
   "addition": {
-    "item": "minecraft:silver_ingot"
+    "item": "overworldoverhaul:silver_ingot"
   },
   "result": {
-    "item": "minecraft:silver_chestplate"
+    "item": "overworldoverhaul:silver_chestplate"
   }
 }

@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_axe"
   },
   "addition": {
-    "item": "minecraft:silver_ingot"
+    "item": "overworldoverhaul:silver_ingot"
   },
   "result": {
-    "item": "minecraft:silver_axe"
+    "item": "overworldoverhaul:silver_axe"
   }
 }

@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_pickaxe"
   },
   "addition": {
-    "item": "minecraft:silver_ingot"
+    "item": "overworldoverhaul:silver_ingot"
   },
   "result": {
-    "item": "minecraft:silver_pickaxe"
+    "item": "overworldoverhaul:silver_pickaxe"
   }
 }

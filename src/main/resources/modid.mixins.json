@@ -4,9 +4,11 @@
   "package": "com.gboihere.overworldoverhaul.mixins",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "BlocksMixin",
+    "ItemsMixin",
+    "MaterialMixin",
     "ArmorMaterialsMixin",
-    "SwordItemsMixin",
-    "ToolItemsMixin"
+    "SwordItemsMixin"
   ],
   "client": [
   ],

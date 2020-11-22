@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_helmet"
   },
   "addition": {
-    "item": "minecraft:silver_ingot"
+    "item": "overworldoverhaul:silver_ingot"
   },
   "result": {
-    "item": "minecraft:silver_helmet"
+    "item": "overworldoverhaul:silver_helmet"
   }
 }

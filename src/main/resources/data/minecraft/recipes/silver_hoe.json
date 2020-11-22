@@ -4,9 +4,9 @@
     "item": "overworldoverhaul:steel_hoe"
   },
   "addition": {
-    "item": "minecraft:silver_ingot"
+    "item": "overworldoverhaul:silver_ingot"
   },
   "result": {
-    "item": "minecraft:silver_hoe"
+    "item": "overworldoverhaul:silver_hoe"
   }
 }

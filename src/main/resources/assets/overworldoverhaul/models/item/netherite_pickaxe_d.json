@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "overworldoverhaul:item/netherite_pickaxe_d"
+  }
+}

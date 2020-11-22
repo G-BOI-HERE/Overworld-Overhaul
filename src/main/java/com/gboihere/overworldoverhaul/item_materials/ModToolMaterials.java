@@ -1,13 +1,13 @@
 package com.gboihere.overworldoverhaul.item_materials;
 
-import java.util.function.Supplier;
-
 import com.gboihere.overworldoverhaul.OverworldOverhaul;
 import net.minecraft.item.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.tag.ItemTags;
 import net.minecraft.util.Lazy;
+
+import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     WOOD(0, 64, 2.0F, 0.0F, 1, () -> {
@@ -16,7 +16,7 @@ public enum ModToolMaterials implements ToolMaterial {
     STONE(1, 124, 4.0F, 1.0F, 3, () -> {
         return Ingredient.fromTag(ItemTags.STONE_TOOL_MATERIALS);
     }),
-    IRON(2, 250, 5.0F, 2.0F, 6, () -> {
+    IRON(1, 250, 5.0F, 1.0F, 6, () -> {
         return Ingredient.ofItems(Items.IRON_INGOT);
     }),
     STEEL(2,325,7.0F,2.0F,11, () ->{
@@ -34,7 +34,9 @@ public enum ModToolMaterials implements ToolMaterial {
     DIAMOND_STEEL(3, 1560, 8.0F, 3.0F, 14, () -> {
         return Ingredient.ofItems(OverworldOverhaul.Diamond_Steel_Ingot);
     }),
-    //ADAMANTITE(4,2000,9.0F,3.0F,15,() -> {return Ingredient.ofItems(???)}),
+    ADAMANT(4,2031,9.0F,4.0F,15,() -> {
+        return Ingredient.ofItems(OverworldOverhaul.Diamond_Steel_Ingot);
+    }),
     NETHERITE(5, 3664, 10.0F, 5.0F, 16, () -> {
         return Ingredient.ofItems(Items.NETHERITE_INGOT);
     });
@@ -52,7 +54,7 @@ public enum ModToolMaterials implements ToolMaterial {
         this.miningSpeed = miningSpeed;
         this.attackDamage = attackDamage;
         this.enchantability = enchantability;
-        this.repairIngredient = new Lazy(repairIngredient);
+        this.repairIngredient = new Lazy<>(repairIngredient);
     }
 
     public int getDurability() {
@@ -76,6 +78,6 @@ public enum ModToolMaterials implements ToolMaterial {
     }
 
     public Ingredient getRepairIngredient() {
-        return (Ingredient)this.repairIngredient.get();
+        return this.repairIngredient.get();
     }
 }

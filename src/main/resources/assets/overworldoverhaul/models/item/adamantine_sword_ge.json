@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "overworldoverhaul:item/adamantine_sword_ge"
+  }
+}

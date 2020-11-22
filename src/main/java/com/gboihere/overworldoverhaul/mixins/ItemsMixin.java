@@ -2,10 +2,14 @@ package com.gboihere.overworldoverhaul.mixins;
 
 import com.gboihere.overworldoverhaul.item_materials.ModToolMaterials;
 import com.gboihere.overworldoverhaul.items.tools.CustomSwordItem;
+import jdk.nashorn.internal.codegen.CompilerConstants;
+import net.minecraft.block.Block;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.Registry;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
@@ -15,30 +19,22 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 
 @Mixin(Items.class)
+public class ItemsMixin {
 
-public class ToolItemsMixin {
-
-    //    private static Item register(String id, Item item) {
-//        return register(String.valueOf(new Identifier(id)), item);
-//    }
     @Shadow
     private static Item register(String id, Item item) {
         return null;
     }
 
-    /**
-     * @author
-     */
     @Inject(method = "register(Ljava/lang/String;Lnet/minecraft/item/Item;)Lnet/minecraft/item/Item;",
             at = @At(value="HEAD"), cancellable = true)
-    private static void registerMixin(String id, Item item, CallbackInfoReturnable<Item> cir) {
+    private static void registerMixin1(String id, Item item, CallbackInfoReturnable<Item> cir) {
         //Swords
         if (id.equals("wooden_sword")) {
             cir.setReturnValue(
                     register(String.valueOf(new Identifier(id)), new CustomSwordItem(ModToolMaterials.WOOD,
                             10, -0.0F, (new Item.Settings()).group(ItemGroup.COMBAT))));
         }
-
 
         //            case "stone_sword":
 //                cir.setReturnValue(new CustomSwordItem(ModToolMaterials.GOLD, 0, -2.4F, (new Item.Settings()).group(ItemGroup.COMBAT)));
@@ -239,6 +235,17 @@ public class ToolItemsMixin {
 //                cir.setReturnValue(new CustomHoeItem(ModToolMaterials.NETHERITE, 3, -0.0F, (new Item.Settings()).group(ItemGroup.COMBAT)));
 //                break;
 //        }
+    }
+
+    @Inject(method = "register(Lnet/minecraft/item/BlockItem;)Lnet/minecraft/item/Item;",
+            at = @At(value="HEAD"), cancellable = true)
+    private static void registerMixin2(BlockItem blockItem, CallbackInfoReturnable<BlockItem> cir) {
+
+    }
+
+    @Inject(method = "register(Lnet/minecraft/block/Block;Lnet/minecraft/item/Item;)Lnet/minecraft/item/Item;",
+            at = @At(value="HEAD"), cancellable = true)
+    private static void registerMixin3(Block block, Item item, CallbackInfoReturnable<Block> cir) {
     }
 }
 
